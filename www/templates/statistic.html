@@ -1,0 +1,27 @@
+<ion-view view-title="Statistic" style = "background-image: url(img/download1.jpg">
+	<ion-content>
+
+		<div class="list card">
+			<div class="item">
+    			<button class="button button-balanced" style="float: left; width: 150px" ng-click="budgetMonth()">
+  					Budget x Month
+				</button>
+				<button class="button button-balanced" style="float: right; width: 150px" ng-click="expenseMonth()">
+  					Expense x Month
+				</button>
+  			</div>
+		</div>
+
+		<br>
+		<div style="padding: 0px 5px" ng-if="onePresent && budgetMonthPresent">
+			<canvas id="line" class="chart chart-bar" chart-data="dataA" chart-labels="labelsA" 
+			chart-legend="true" chart-series="seriesA" chart-click="onClick()"></canvas>
+		</div>
+
+		<div style="padding: 0px 5px" ng-if="onePresent && expenseMonthPresent">
+			<canvas id="line" class="chart chart-bar" chart-data="dataB" chart-labels="labelsB" 
+			chart-legend="true" chart-series="seriesB" chart-click="onClick()"></canvas>
+		</div>
+
+	</ion-content>
+</ion-view>

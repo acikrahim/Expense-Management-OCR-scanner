@@ -1,0 +1,78 @@
+<ion-view view-title="Budget" style = "background-image: url(img/download1.jpg">
+  	<br><br>
+		
+	<div ng-repeat="option in options">
+		{{option.month}}
+	</div>
+	<div class="list list-inset">
+		<label class="item item-input">
+			<input type="number" placeholder="Set/edit budget for this month" ng-model="item.budget">
+		</label>
+		<button class="button button-block button-positive" ng-click="saveBudget()">
+			Save
+		</button>
+		<label class="item" ng-if="curBudgetStatus == false">
+			Current Budget : RM0.00
+		</label>
+		<label class="item" ng-if="curBudgetStatus">
+			Current Budget : RM{{ currentBudget.budget }}
+		</label>
+	</div>
+
+	<ion-content scroll="true" style="margin-top: 190px">
+		<div class="list">
+
+		  	<div class="item item-divider">
+		    	{{year}}
+		  	</div>
+
+		  	<div class="item">
+		    	Budget for January: RM {{allBudget[0].January.budget}}
+		  	</div>
+
+		  	<div class="item">
+	    		Budget for February: RM {{allBudget[0].February.budget}}
+	  		</div>
+
+	  		<div class="item">
+	    		Budget for March: RM {{allBudget[0].March.budget}}
+	  		</div>
+
+	  		<div class="item">
+	    		Budget for April: RM {{allBudget[0].April.budget}}
+	  		</div>
+
+	  		<div class="item">
+	    		Budget for May: RM {{allBudget[0].May.budget}}
+	  		</div>
+
+	  		<div class="item">
+	    		Budget for June: RM {{allBudget[0].June.budget}}
+	  		</div>
+
+	  		<div class="item">
+	    		Budget for July: RM {{allBudget[0].July.budget}}
+	  		</div>
+
+	  		<div class="item">
+	    		Budget for August: RM {{allBudget[0].August.budget}}
+	  		</div>
+
+	  		<div class="item">
+	    		Budget for September: RM {{allBudget[0].September.budget}}
+	  		</div>
+
+	  		<div class="item">
+	    		Budget for October: RM {{allBudget[0].October.budget}}
+	  		</div>
+
+	  		<div class="item">
+	    		Budget for November: RM {{allBudget[0].November.budget}}
+	  		</div>
+
+	  		<div class="item">
+	    		Budget for December: RM{{allBudget[0].December.budget}}
+	  		</div>
+		</div>
+  	</ion-content>
+</ion-view>

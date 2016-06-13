@@ -1,0 +1,23 @@
+<ion-view title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Save/Edit Label">
+
+    <ion-nav-buttons side="left">
+        <button class="button back-button buttons button-clear header-item" ng-click="goBack()">
+            <i class="icon ion-ios-arrow-back"> Back</i> 
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content>
+    	<div class="list list-inset">
+            <label class="item item-input">
+                <textarea type="text" ng-model="ocr.text" style="height: 150px"></textarea>
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="Total Price" ng-model="item.price">
+            </label>
+            <label class="item">
+                <button class="button button-block button-positive" ng-click="addExpense()">Send feedback</button>   
+            </label>        
+        </div>
+	</ion-content>
+
+</ion-view>

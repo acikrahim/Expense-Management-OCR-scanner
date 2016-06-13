@@ -1,0 +1,52 @@
+<ion-view view-title="Expense" style = "background-image: url(img/download1.jpg">
+	<br><br><br>
+    
+	<label class="item item-input">
+	    <span class="input-label">Date:&nbsp;{{ date }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total:&nbsp;RM{{ getTotal() }}</span>
+	</label>
+	
+    <div class="row">
+        <div class="col col-55">
+            <label class="item item-input item-stacked-label">
+                <input ng-model='item.label' type="text" id="labelInput" placeholder="Item">
+            </label>
+        </div>
+
+        <div class="col col-20">
+            <label class="item item-input item-stacked-label">
+                <input ng-model='item.quantity' type="number" id="costInput" placeholder="Qty.">
+            </label>
+        </div>
+
+        <div class="col col-25">
+            <label class="item item-input item-stacked-label">
+                <input ng-model='item.price' type="number" id="costInput" placeholder="Price">
+            </label>
+        </div>
+
+    </div>
+
+    <div style="padding: 0px 15px">
+  		<button class="button button-block button-royal" ng-click="addExpense()">Save</button>
+  	</div>
+  	<hr>
+    <ion-content scroll="true" style="margin-top: 203px">
+
+		<div ng-repeat="item in expense" style="margin-top: -10px">
+			<div class="row">
+			    <div class="col col-70">
+			        {{ item.label }}
+			    </div>
+			    <div class="col col-20">
+			        {{ item.cost }}
+			    </div>
+			    <div class="col col-10">
+			    	<button ng-click="removeExpense(item)"><i class="icon ion-close-circled"></i></button>
+		        </div>
+			    <hr>
+			</div>
+			<hr style="margin-top: -3px">
+		</div>
+
+  	</ion-content>
+</ion-view>

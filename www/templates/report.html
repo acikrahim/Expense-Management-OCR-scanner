@@ -1,0 +1,32 @@
+	<ion-view view-title="Report" style = "background-image: url(img/download1.jpg">
+
+	<br><br><br>	
+	<div class="list">	
+		<label class="item item-input">
+			<span class="input-label">Date</span>
+				<input type="date" ng-model="form.date">
+		</label>
+
+		<label class="item">
+			<button class="button button-block button-royal" ng-click="getReport()">Get Report</button>
+		</label>
+	</div>
+
+	<ion-content scroll="true" style="margin-top: 203px">
+
+		<div ng-repeat="items in report" style="margin-top: -10px">
+			<div class="row">
+			    <div class="col col-70">
+			        {{ items.label }}
+			    </div>
+			    <div class="col col-25">
+			        RM<p style="float: right">{{ items.cost }}</p>
+			    </div>
+			  
+			    <hr>
+			</div>
+			<hr style="margin-top: -10px">
+		</div>
+
+  	</ion-content>
+</ion-view>
